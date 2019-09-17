@@ -1,0 +1,62 @@
+{
+	"id": "a1643dc5-b0d7-ce7a-b6f7-b2186320a9c3",
+	"name": "springboot-servicio-item",
+	"description": "",
+	"order": [
+		"3b63bc23-9105-f01f-0afe-6df0dd654847",
+		"b447177b-03f0-b538-1798-21776eb80447"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1568689920215,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "3b63bc23-9105-f01f-0afe-6df0dd654847",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8002/api/listaItems",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a1643dc5-b0d7-ce7a-b6f7-b2186320a9c3",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8002/api/listaItems",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1568689926600,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b447177b-03f0-b538-1798-21776eb80447",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8002/api/detalle/2/cantidad/3",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a1643dc5-b0d7-ce7a-b6f7-b2186320a9c3",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8002/api/detalle/2/cantidad/3",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1568690375301,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
