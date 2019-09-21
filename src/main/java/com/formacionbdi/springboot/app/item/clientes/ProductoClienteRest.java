@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.formacionbdi.springboot.app.item.models.Producto;
 
 @RequestMapping("/api")
-@FeignClient(name = "servicio-productos", url = "localhost:8001")
+@FeignClient(name = "servicio-productos")
 public interface ProductoClienteRest {
 
 	@GetMapping("/listarProductos")
