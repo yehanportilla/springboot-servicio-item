@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.formacionbdi.springboot.app.item.models.Producto;
 
-@RequestMapping("/api")
+
 @FeignClient(name = "servicio-productos")
 public interface ProductoClienteRest {
 

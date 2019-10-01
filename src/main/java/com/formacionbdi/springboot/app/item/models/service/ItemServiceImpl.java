@@ -21,9 +21,9 @@ import com.formacionbdi.springboot.app.item.models.Producto;
 @Service("serviceRestTemplate")
 public class ItemServiceImpl implements ItemService {
 
-	private static final String URL_API_LISTA_PRODUCTOS = "http://servicio-productos/api/listarProductos";
+	private static final String URL_API_LISTA_PRODUCTOS = "http://servicio-productos/listarProductos";
 
-	private static final String URL_API_BUSCA_POR_ID_PRODUCTO = "http://servicio-productos/api/buscarProducto/{id}";
+	private static final String URL_API_BUSCA_POR_ID_PRODUCTO = "http://servicio-productos/buscarProducto/{id}";
 
 	@Autowired
 	private RestTemplate clienteRest;

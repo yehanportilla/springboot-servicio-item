@@ -21,7 +21,6 @@ import com.netflix.ribbon.proxy.annotation.Hystrix;
  *
  */
 @RestController
-@RequestMapping("/api")
 public class ItemController {
 
 	@Autowired
