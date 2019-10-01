@@ -34,7 +34,7 @@ public class ItemController {
 
 	}
 	
-    @HystrixCommand(fallbackMethod = "metodoAlternativo")
+    @HystrixCommand(fallbackMethod = "metodoAlternativo")// Camino alternativo
 	@GetMapping("/detalle/{id}/cantidad/{cantidad}")
 	public Item buscarPorId(@PathVariable Long id, @PathVariable Integer cantidad) {
 
