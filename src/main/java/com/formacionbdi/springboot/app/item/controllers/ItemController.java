@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionbdi.springboot.app.item.models.Item;
+import com.formacionbdi.springboot.app.item.models.Producto;
 import com.formacionbdi.springboot.app.item.models.service.ItemService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 
 /**
  * 
@@ -30,11 +33,34 @@ public class ItemController {
 		return itemService.findAll();
 
 	}
-
+	
+    @HystrixCommand(fallbackMethod = "metodoAlternativo")
 	@GetMapping("/detalle/{id}/cantidad/{cantidad}")
 	public Item buscarPorId(@PathVariable Long id, @PathVariable Integer cantidad) {
 
 		return itemService.findById(id, cantidad);
 	}
+    
+    
+    /**
+     * Method alternative for error
+     * @param id
+     * @param cantidad
+     * @return
+     */
+    public Item metodoAlternativo (Long id,Integer cantidad) {
+    	Item item = new Item();
+    	Producto producto = new Producto();
+    	
+    	item.setCantidad(cantidad);
+    	producto.setId(id);
+    	producto.setNombre("Camara Sony");
+    	producto.setPrecio(500.00);
+    	item.setProducto(producto);
+    	
+    	return item;
+    }
+    
+    
 
 }
